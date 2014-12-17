@@ -17,3 +17,53 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  font-family: Helvetica, serif, sans-serif;
+}
+
+#header {
+  text-align: center;
+  border-bottom: 2px solid black;
+
+
+}
+
+#footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+.foot_butt {
+  
+}
+
+#about_title {
+  text-align: center;
+  padding: 20px;
+
+
+}
+
+#about_body {
+  text-align: center;
+  width: 100%;
+  padding-left: 30%;
+  padding-right: 30%;
+
+}
+
+#home_title {
+  text-align: center;
+  h1 {
+    font-size: 8em;
+    padding-top: 10%;
+  }
+}
