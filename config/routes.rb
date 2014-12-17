@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'tasks/new'
+
+  get 'tasks/index'
+
+  get 'tasks/show'
+
+  get 'tasks/edit'
+
+  get 'projects/new'
+
+  get 'projects/show'
+
+  get 'projects/edit'
+
+  get 'projects/index'
+
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
