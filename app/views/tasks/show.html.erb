@@ -1,2 +1,15 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1><%= @project.name %></h1>
+<h2><%= @task.title %></h2>
+
+<h4>Description:</h4>
+<p><%= simple_format(@task.description) %></p>
+
+<h4>Due: <%= @task.due %></h4>
+
+<h4>Assigned to: <%= @task.assigned_to %></h4>
+
+<h3><%= link_to 'Edit Task', edit_project_task_path(@project, @task) %></h3>
+<h4><%= link_to 'Delete Task', destroy_path(@project, @task), method: :delete %></h4>
+
+<h3><%= link_to 'Back', project_path(@project) %></h3>
+

@@ -1,23 +1,14 @@
-Rails.application.routes.draw do
-  get 'tasks/new'
+Rails.application.routes.draw do  
 
-  get 'tasks/index'
-
-  get 'tasks/show'
-
-  get 'tasks/edit'
-
-  get 'projects/new'
-
-  get 'projects/show'
-
-  get 'projects/edit'
-
-  get 'projects/index'
+  resources :projects do
+    resources :tasks, except: [:index]
+  end
 
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
+
+  delete '/projects/:project_id/tasks/:id' => 'tasks#destroy', as: :destroy
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

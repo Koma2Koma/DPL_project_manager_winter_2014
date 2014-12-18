@@ -5,6 +5,8 @@ class CreateTasks < ActiveRecord::Migration
       t.text :description
       t.string :due
       t.string :assigned_to
+      t.references :project, index: true
+
 
       t.timestamps
     end
