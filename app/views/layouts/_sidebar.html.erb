@@ -1,11 +1,13 @@
 <h3 class="sidebar-header">Projects</h3>
+
 <ul class="sidebar-list">
-	<li>Project #1</li>
-	<li>Project #2</li>
-	<li>Project #3</li>
-	<li>Project #4</li>
+	<% Project.all.each do |project| %>
+		<li><%= project.name %></li>
+	<% end %>
 </ul>
+
 <h3 class="sidebar-header">Team</h3>
+
 <ul class="sidebar-list">
 	<li>Name #1</li>
 	<li>Name #2</li>
