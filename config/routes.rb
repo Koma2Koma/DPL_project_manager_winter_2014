@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   delete '/projects/:project_id/tasks/:id' => 'tasks#destroy', as: :destroy
 
+  delete '/projects/:id' => 'projects#destroy', as: :project_destroy
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
