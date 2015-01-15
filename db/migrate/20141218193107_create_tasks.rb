@@ -6,6 +6,7 @@ class CreateTasks < ActiveRecord::Migration
       t.date :deadline
       t.boolean :is_completed
       t.references :project, index: true
+      t.references :user, index: true
 
       t.timestamps
     end
