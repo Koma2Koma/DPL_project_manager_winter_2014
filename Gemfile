@@ -34,6 +34,8 @@ gem 'pry-rails'
 # Awesome fonts yo!
 gem 'font-awesome-sass'
 
+gem 'devise'
+
 group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
