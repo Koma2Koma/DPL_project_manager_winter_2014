@@ -40,6 +40,7 @@ gem 'font-awesome-sass'
 
 # User authentication 
 gem 'devise'
+gem 'omniauth-github'
 
 group :development, :test do
   gem 'dotenv-rails'
