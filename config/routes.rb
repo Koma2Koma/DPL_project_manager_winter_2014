@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'apis/callback', to: 'apis#github_callback', as: 'github_callback'
 
-  devise_for :users, :controllers => { registrations: 'registrations', :omniauth_callbacks => "apis" }
+  devise_for :users, :controllers => { registrations: 'registrations', :omniauth_callbacks => "apis" }  
 
   get 'tasks/new'
 
