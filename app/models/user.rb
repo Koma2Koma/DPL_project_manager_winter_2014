@@ -19,6 +19,18 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session["devise.github_data"] && session["devise.github_data"]["extra"]["raw_info"]
+        user.email = data["email"] if user.email.blank?
+        user.name = data['name']
+        user.github_username = data['login']
+        user.github_access_token = session["devise.github_data"]['credentials']['token']
+        user.github_state = 'completed'
+      end
+    end
+  end
+
   def generate_github_state!
     self.update_attributes(github_state: self.generate_github_state)
     self.github_state
