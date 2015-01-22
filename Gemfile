@@ -42,6 +42,9 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'omniauth-github'
 
+gem 'cancancan'
+gem 'rolify'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'spring-commands-rspec'
