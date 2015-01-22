@@ -26,7 +26,9 @@
     </div>
     <%#= link_to 'New Project', new_project_path, class: "btn btn-default" %>
     <!-- Button trigger modal -->
-    <%= link_to 'New Project', new_project_path, id: 'new-project-ajax', class: "btn btn-primary", remote: true %>
+    <% if current_user.has_role? :admin %>
+      <%= link_to 'New Project', new_project_path, id: 'new-project-ajax', class: "btn btn-primary", remote: true %>
+    <% end %>
 
 <!--     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
       New Project
