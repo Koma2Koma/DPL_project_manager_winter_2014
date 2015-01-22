@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify
   has_many :tasks
 
   # Include default devise modules. Others available are:
