@@ -3,5 +3,9 @@
   <td class="col-md-2"><%= project.title %></td>
   <td class="col-md-5"><%= project.description %></td>
   <td class="col-md-1"><%= project.deadline %></td>
-  <td class="col-md-1 text-center"><%= link_to 'Project', project_path(project), class: "btn btn-default" %></td>
+  <td class="col-md-1 text-center">
+    <% if can? :manage, project %>
+      <%= link_to 'Project', project_path(project), class: "btn btn-default" %>
+    <% end %>
+  </td>
 </tr>

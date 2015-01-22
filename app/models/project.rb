@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  resourcify
+  
   has_many :tasks
 
   validates :team, presence: true
