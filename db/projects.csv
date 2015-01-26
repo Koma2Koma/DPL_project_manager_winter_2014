@@ -1,0 +1,5 @@
+name,email,password,password_confirmation
+Winter Cohorot, winter2015@devpointlabs.com, password, password
+Admin User, admin@dpl.com, password, password
+Normal User, normal@dpl.com, password, password
+Awesome User, awesome@dpl.com,"comma,in,password","comma,in,password"
